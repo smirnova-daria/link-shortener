@@ -1,0 +1,41 @@
+.section {
+	padding: 1rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.link_row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	padding: 1rem 2rem;
+	font-size: 20px;
+	gap: 1rem;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+.base_link {
+	flex: 1 0 50%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.short_link {
+}
+.copy_btn {
+	width: 120px;
+	height: 40px;
+	padding: 0.5rem;
+	font-family: inherit;
+	font-size: 1.2rem;
+	background-color: #bdd0fb;
+	border: 1px solid #0f046c;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+		background-color: #7d97f4;
+	}
+}

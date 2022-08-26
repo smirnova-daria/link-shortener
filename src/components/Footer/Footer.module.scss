@@ -1,0 +1,15 @@
+.footer {
+	background-color: #7d97f4;
+}
+
+.footer_wrapper {
+	padding: 1.5rem 0;
+	text-align: center;
+}
+.footer_wrapper a {
+	color: inherit;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}

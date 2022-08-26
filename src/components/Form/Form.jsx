@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { createShortLink, selectLoading } from "../store/slice/linkSlice";
+import { createShortLink, selectLoading } from "../../store/slice/linkSlice";
+import s from "./Form.module.scss";
 
 export const Form = () => {
   const {
@@ -19,8 +20,9 @@ export const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
       <input
+        className={s.input}
         type="url"
         placeholder="Введите ссылку"
         {...register("Url", {
@@ -32,14 +34,17 @@ export const Form = () => {
           },
         })}
         style={{
-          outlineColor: errors.Url ? "red" : "black",
-          outlineWidth: errors.Url ? "2px" : "1px",
+          outlineColor: errors.Url ? "#d33232" : "#6e45ff",
         }}
         disabled={loading === "loading"}
       />
 
-      <button type="submit" disabled={loading === "loading"}>
-        Go!
+      <button
+        className={s.submit_btn}
+        type="submit"
+        disabled={loading === "loading"}
+      >
+        Сократить!
       </button>
       {errors.Url && <div>{errors.Url.message}</div>}
     </form>

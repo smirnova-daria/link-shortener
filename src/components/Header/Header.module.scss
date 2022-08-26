@@ -1,0 +1,32 @@
+.header_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	@media (max-width: 768px) {
+		gap: 1rem;
+	}
+	@media (max-width: 520px) {
+		flex-direction: column;
+	}
+}
+.title {
+	font-size: 3rem;
+	font-weight: 700;
+	color: #424242;
+	text-align: right;
+	@media (max-width: 768px) {
+		font-size: 2.5rem;
+	}
+	@media (max-width: 520px) {
+		font-size: 2rem;
+	}
+}
+
+.banner {
+	display: block;
+	width: 300px;
+	@media (max-width: 768px) {
+		width: 200px;
+	}
+}
